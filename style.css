@@ -1,0 +1,132 @@
+@font-face {
+    font-family:Poppins-Regular;
+    src:url(fonts/Poppins/Poppins-Regular.ttf);
+    font-weight:normal;
+}
+
+
+
+:root {
+    /* --font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif; */
+    --font-family:Poppins-Regular, sans-serif;
+    --default-color:white;
+    --secondary-color:green;
+    --overlay-bg-color:linear-gradient(rgba(45, 80, 82, .85), rgba(1, 61, 3, .95));
+    --survey-bg-color:rgba(0,0,0,.4);
+    --input-padding:8px;
+    --input-border-radius:6px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    /**/
+    background-image:url(background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /**/
+    font-family: var(--font-family);
+    color:var(--default-color);
+}
+
+#main {
+    background: var(--overlay-bg-color) fixed;
+    /**/
+    padding: 8px; /*to prevent margin collapsing*/
+}
+
+header {
+    text-align: center;
+}
+
+header #description {
+    font-style: italic;
+}
+
+
+
+/**/
+
+#survey-form {
+    background-color: var(--survey-bg-color);
+    border-radius:5px;
+    /**/
+    max-width: 700px;
+    margin:50px auto;
+    padding:4px;/*to prevent margin collapsing*/
+    /**/
+    font-size:1.125rem;;
+}
+
+#survey-form > * {
+    margin:30px;
+}
+
+
+input:not([type="radio"]):not([type="checkbox"]), label, select, textarea, button {
+    /* For making the form items start at a new line each */
+    display: block;
+    width: 100%;
+    /**/
+    font-size: inherit;
+    font-family:inherit;
+    
+}
+
+input, select, button {
+    border-radius:var(--input-border-radius);
+    /**/
+    height: auto;
+    padding: var(--input-padding);
+}
+
+input[type="radio"], input[type="checkbox"] {
+    transform: scale(1.4);
+    margin-right: 8px;
+}
+
+input, select, textarea {
+    border:2px solid transparent;
+    outline:none;
+}
+
+input:focus, select:focus, textarea:focus {
+    border:2px solid var(--secondary-color);
+}
+
+textarea {
+    padding: var(--input-padding);
+    border-radius:var(--input-border-radius);
+    resize:vertical;
+    min-height:10em;
+}
+
+label {
+    margin-bottom:10px;
+}
+
+fieldset {
+    border: none;
+    padding: inherit;
+    margin: 0;
+}
+
+button {
+    background-color:var(--secondary-color);
+    color:var(--default-color);
+    /**/
+    border:none;
+    outline:none;
+}

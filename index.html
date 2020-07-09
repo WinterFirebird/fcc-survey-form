@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div id="main">
+        <header>
+            <h1 id="title">SamDigital Survey Form</h1>
+            <p id="description">Thank you for taking the time to help us improve our services</p>
+        </header>
+        <form id="survey-form" action="#" method="GET">
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Enter your name" required/>
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="Enter your Email" required/>
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="number">Age (optional)</label>
+                <input id="number" name="age" type="number" min="10" max="99" placeholder="Age" required/>
+            </div>
+            <div class="form-group">
+                <label for="dropdown">Which option best describes your current role?</label>
+                <select id="dropdown">
+                    <option>Using our services now</option>
+                    <option>Used our services before</option>
+                    <option>Planning to use our services</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Would you recommend our services to your friends and relatives?</label>
+                <fieldset id="radio">
+                    <label>
+                        <input name="user-recommends" type="radio" value="val"/>
+                        Definitely
+                    </label>
+                    <label>
+                        <input name="user-recommends" type="radio" value="val"/>
+                        Maybe
+                    </label>
+                    <label>
+                        <input name="user-recommends" type="radio" value="val"/>
+                        Not sure
+                    </label>
+                </fieldset> 
+            </div>
+            <div class="form-group">
+                <label for="dropdown2">What do you like the most about our services?</label>
+                <select id="dropdown2">
+                    <option>Quality</option>
+                    <option>Speed</option>
+                    <option>Price</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>What would you like to get improved?</label>
+                <fieldset id="checkbox">
+                    <label>
+                        <input name="what-to-improve" type="checkbox" value="val"/>
+                        The speed of our services
+                    </label>
+                    <label>
+                        <input name="what-to-improve" type="checkbox" value="val"/>
+                        The quality of our services
+                    </label>
+                    <label>
+                        <input name="what-to-improve" type="checkbox" value="val"/>
+                        Our pricing
+                    </label>
+                    <label>
+                        <input name="what-to-improve" type="checkbox" value="val"/>
+                        Our user-support
+                    </label>
+                    <label>
+                        <input name="what-to-improve" type="checkbox" value="val"/>
+                        Other
+                    </label>
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <label for="text-area">Any additional comments or suggestions?</label>
+                <textarea id="text-area" placeholder="Enter your comment here..."></textarea>
+            </div>
+            <div class="form-group">
+                <button id="submit" type="submit">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
